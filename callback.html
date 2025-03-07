@@ -26,13 +26,13 @@
     <script>
         // Capturar el código de autorización de la URL
         const urlParams = new URLSearchParams(window.location.search);
-        const code = urlParams.get('code');
+       const code = urlParams.get('code');
         
-        if (code) {
-            // Aquí podrías enviar el código a tu aplicación
-            console.log("Código de autorización:", code);
-            // Este código será utilizado posteriormente en tu integración con Excel
-        }
+if (code) {
+    // Mostrar el código en la página
+    document.getElementById('auth-code').textContent = code;
+    document.getElementById('code-display').style.display = 'block';
+}
     </script>
 </body>
 </html>
