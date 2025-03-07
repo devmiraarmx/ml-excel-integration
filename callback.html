@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autorización completada</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .success {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Autorización de Mercado Libre</h1>
+    <p class="success">¡Autorización completada!</p>
+    <p>Puedes cerrar esta ventana y volver a la aplicación.</p>
+    
+    <script>
+        // Capturar el código de autorización de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get('code');
+        
+        if (code) {
+            // Aquí podrías enviar el código a tu aplicación
+            console.log("Código de autorización:", code);
+            // Este código será utilizado posteriormente en tu integración con Excel
+        }
+    </script>
+</body>
+</html>
